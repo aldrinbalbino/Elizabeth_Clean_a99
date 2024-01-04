@@ -70,7 +70,7 @@
                 <!-- MOBILE MENU HEADER TITLE PLUS CLOSE BUTTON -->
                 <div class="flex items-center justify-between pb-3">
                     <div>
-                        <h1 class="text-lg text-gray-500">{{ shop.name }}</h1>
+                        <h1 class="text-lg text-gray-500">{{ section.settings.mobile_menu_title }}</h1>
                     </div>
                     <div class="-mr-2">
                         <button x-on:click="mobileMenuOpen = false" type="button" class="bg-white rounded-md p-2 text-gray-500">
@@ -121,9 +121,15 @@
 
 {% schema %}
 {
-    "name": "Navigational Bar",
+    "name": "Header",
     "settings": [
-        
-        ]
+        {
+            "type": "text",
+            "id": "mobile_menu_title",
+            "label": "Title",
+            "default": "Menu",
+            "info": "This is the title of the mobile menu window"
+        }
+    ]
 }
 {% endschema %}
